@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, makeStyles } from "@material-ui/core";
+import { Link } from "@material-ui/core";
 import { useHistory } from "react-router";
 
 function NotFound() {

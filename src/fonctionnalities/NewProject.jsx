@@ -23,16 +23,13 @@ const useStyle = makeStyles({
 export default function NewProject() {
   const classes = useStyle();
   const [showModal, setShowModal] = React.useState(false);
-  // const [imageUrl, setImageUrl] = useState("");
   const [portfolio, setPortfolio] = useState({
     title: "",
     description: "",
     image: "",
     like: 0,
   });
-  const handleClickOpen = () => {
-    setShowModal(true);
-  };
+
   const handleClose = () => {
     setShowModal(false);
   };

@@ -20,7 +20,7 @@ const useStyle = makeStyles({
     height: '500px'
   }
 });
-export default function Projects({ match }) {
+export default function Projects({ props }) {
   const classes = useStyle();
   const [projects, setProjects] = useState([]);
   useEffect(() => {
@@ -28,19 +28,26 @@ export default function Projects({ match }) {
       .get(`http://localhost:3031/portfolio/`)
       .then((response) => response.data)
       .then((data) => setProjects(data));
-    const data = { ...projects, like: projects.like + 1 };
-    console.log(data);
   }, []);
 
   const [liked, setLiked] = useState(false);
-
-  const handleClickLikes = async (e) => {
+  const [like, setLike] = useState({
+    id: "",
+    like: ""
+  })
+  const handleClickLikes = (likeId) => {
     setLiked(!liked);
-    try {
-      if (match?.params?.id) {
-        axios.post(`http://localhost:3031/portfolio/${match?.params?.id}`, {});
-      }
-    } catch (e) {}
+     axios.patch(`http://localhost:3031/portfolio/${likeId}`, like)
+     .then((res) => {
+      console.log(res.data)
+      const newLike = like.map((project) => {
+        if(project.id = likeId){
+          return{...project, like: like+1}
+        }
+        return project
+      })
+      setLike(newLike);
+     })
   };
   return (
     <div className={classes.cards}>

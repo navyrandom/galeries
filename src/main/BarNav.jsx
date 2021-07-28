@@ -7,10 +7,8 @@ import NavbarToggler from "@material-tailwind/react/NavbarToggler";
 import NavbarCollapse from "@material-tailwind/react/NavbarCollapse";
 import Nav from "@material-tailwind/react/Nav";
 import NavLink from "@material-tailwind/react/NavLink";
-import NavbarInput from "@material-tailwind/react/NavbarInput";
 import Icon from "@material-tailwind/react/Icon";
 import DescriptionIcon from "@material-ui/icons/Description";
-import axios from "axios";
 import NewProject from "../fonctionnalities/NewProject";
 
 export default function BarNav({ onSubmit }) {
