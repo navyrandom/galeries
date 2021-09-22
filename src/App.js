@@ -1,16 +1,14 @@
 import "./App.css";
 import BarNav from "./main/BarNav";
 import "@material-tailwind/react/tailwind.css";
-import Projects from "./fonctionnalities/Projects";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Presentation from "./fonctionnalities/Presentation";
 import NotFound from "./fonctionnalities/NotFound";
-import Minimal from "./main/Minimal";
-// import Contact from "./fonctionnalities/Contact";
 import "tailwindcss/tailwind.css";
+import Projects from './fonctionnalities/Projects';
+import ImagesSlider from "./fonctionnalities/ImagesSlider";
 
 function App() {
-
   return (
     <div>
       <Router>
@@ -25,14 +23,19 @@ function App() {
             exact
             path="/portfolio"
             render={(matchProps) => <Projects {...matchProps} />}
+            //correction
+          />
+           <Route exact path="/test"
+           render={(matchProps) => <ImagesSlider {...matchProps} />}
+          // first idea 
           />
           <Route
+            path="/*"
             render={() => {
-              <Minimal>
-                <NotFound />
-              </Minimal>;
+              <NotFound />;
             }}
           />
+         
         </Switch>
       </Router>
     </div>

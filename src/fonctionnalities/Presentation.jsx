@@ -7,7 +7,7 @@ function Presentation(props) {
     <div className="all">
       <div className="demodiv">
         <div className="demo">
-          My name is Nha Vy, everybody CALL ME ...0695821092.
+          Hi! I am Nha Vy, contact me if you are interested.
         </div>
       </div>
       <div className="wordCarousel">
@@ -22,12 +22,12 @@ function Presentation(props) {
             </div>
 
       </div>
-      {/* <img src="./me.png" alt="about-me" className="me" /> */}
+     
       <IconButton href="https://github.com/navyrandom">
-        <img src="./github.png" alt="linkgithub" className="github" />
+        <img src="./github.png" alt="github" className="github" />
       </IconButton>
       <IconButton href="https://www.linkedin.com/in/nha-vy-vo-doan-94817765/">
-        <img src="./in.png" alt="link-linkedin" className="linkedin" />
+        <img src="./in.png" alt="linkedin" className="linkedin" />
       </IconButton>
     </div>
   );

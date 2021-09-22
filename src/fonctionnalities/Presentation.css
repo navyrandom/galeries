@@ -78,13 +78,13 @@ float: inline-end;
   display: block;
 }
 .flip2 {
-  animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+  animation: flip2 2s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
 }
 .flip3 {
-  animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+  animation: flip3 3s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
 }
 .flip4 {
-  animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+  animation: flip4 4s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
 }
 @keyframes flip2 {
   0% {

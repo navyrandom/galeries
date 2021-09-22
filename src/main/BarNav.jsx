@@ -18,7 +18,7 @@ export default function BarNav({ onSubmit }) {
     <Navbar color="blueGray" navbar>
       <NavbarContainer>
         <NavbarWrapper>
-          <NavbarBrand>Nha Vy who?</NavbarBrand>
+          <NavbarBrand>Nha Vy VO DOAN</NavbarBrand>
           <NavbarToggler
             color="white"
             onClick={() => setOpenNavbar(!openNavbar)}
@@ -34,7 +34,7 @@ export default function BarNav({ onSubmit }) {
             </NavLink>
             <NavLink href="/" ripple="light">
               <Icon name="account_circle" size="xl" />
-              about me
+              Presentation
             </NavLink>
           </Nav>
 

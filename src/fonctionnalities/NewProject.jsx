@@ -55,7 +55,7 @@ export default function NewProject() {
         ripple="light"
         size="lg"
       >
-        + Add new project to the portfolio
+        + New project
       </Button>
 
       <Modal size="lg" active={showModal} toggler={() => setShowModal(false)}>
@@ -80,7 +80,7 @@ export default function NewProject() {
           value={portfolio.description}
           onChange={handleChange}
           />
-          Lien de l'image
+          Image(s)'s link
             <Input
             type="text"
             color="lightBlue"
@@ -90,13 +90,7 @@ export default function NewProject() {
             value={portfolio.image}
             onChange={handleChange}
           />
-          {/* {imageUrl ? (
-            <a href={imageUrl} download>
-              <img src={imageUrl} alt="upload" href={imageUrl} download />
-            </a>
-          ) : null}
-          <Input type="file" color="lightBlue" size="lg" outline={false} /> */}
-        </ModalBody>
+            </ModalBody>
         <ModalFooter>
           <Button
             color="red"
@@ -108,7 +102,7 @@ export default function NewProject() {
           </Button>
 
           <Button color="green" onClick={handleClickAdd} ripple="light">
-            Definitely post this!
+            Post
           </Button>
         </ModalFooter>
       </Modal>
