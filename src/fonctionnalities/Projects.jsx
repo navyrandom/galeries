@@ -1,20 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { makeStyles } from "@material-ui/core";
 import PostItem from "./PostItem";
-import ImagesSlider from "./ImagesSlider";
+import "./All.css";
 
-const useStyle = makeStyles({
-  cards: {
-    marginTop: "60px",
-  },
-  images: {
-    height: "500px",
-  },
-});
 export default function Projects(props) {
-  const classes = useStyle();
-
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     axios
@@ -24,21 +13,19 @@ export default function Projects(props) {
   }, []);
 
   return (
-    <div className={classes.cards}>
-      {projects.map((project) => {
-        return (
-          <>
-            <ImagesSlider src={project.image} />
+    <div className="listCards">
+      <div className="cards">
+        {projects.map((project) => {
+          return (
             <PostItem
               key={project.id}
-              title={<h1>{project.title}</h1>}
-              description={project.description}
+              // title={<h1>{project.title}</h1>}
+              // description={project.description}
+              src={project.image}
             />
-         
-         
-          </>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }
