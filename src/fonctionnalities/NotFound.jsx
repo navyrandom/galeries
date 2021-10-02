@@ -8,7 +8,7 @@ function NotFound() {
   };
   return (
     <div>
-      <h1>404 Not Found</h1>
+      <h1>You are not lost, you're just wandering</h1>
       <div onClick={redirectToHome}>Go back to my portfolio</div>
     </div>
   );

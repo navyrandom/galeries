@@ -3,7 +3,6 @@ import axios from "axios";
 import { makeStyles } from "@material-ui/core";
 import PostItem from "./PostItem";
 import ImagesSlider from "./ImagesSlider";
-import { Carousel } from "@trendyol-js/react-carousel";
 
 const useStyle = makeStyles({
   cards: {
@@ -29,12 +28,14 @@ export default function Projects(props) {
       {projects.map((project) => {
         return (
           <>
-            <ImagesSlider />
+            <ImagesSlider src={project.image} />
             <PostItem
               key={project.id}
               title={<h1>{project.title}</h1>}
               description={project.description}
             />
+         
+         
           </>
         );
       })}
