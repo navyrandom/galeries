@@ -5,10 +5,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Presentation from "./fonctionnalities/Presentation";
 import NotFound from "./fonctionnalities/NotFound";
 import "tailwindcss/tailwind.css";
-import Projects from './fonctionnalities/Projects';
+import Projects from "./fonctionnalities/Projects";
 import ImagesSlider from "./fonctionnalities/ImagesSlider";
 
 function App() {
+
   return (
     <div>
       <Router>
@@ -25,15 +26,13 @@ function App() {
             render={(matchProps) => <Projects {...matchProps} />}
             //correction
           />
-           <Route exact path="/test"
-           render={(matchProps) => <ImagesSlider {...matchProps} />}
-          // first idea 
-          />
           <Route
-            path="/*"
-            component={NotFound}
+            exact
+            path="/test"
+            render={(matchProps) => <ImagesSlider {...matchProps} />}
+            // first idea
           />
-         
+          <Route path="/*" component={NotFound} />
         </Switch>
       </Router>
     </div>

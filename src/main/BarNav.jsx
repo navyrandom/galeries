@@ -15,25 +15,25 @@ export default function BarNav({ onSubmit }) {
   const [openNavbar, setOpenNavbar] = useState(false);
 
   return (
-    <Navbar color="blueGray" navbar>
+    <Navbar color='yellow' navbar>
       <NavbarContainer>
         <NavbarWrapper>
-          <NavbarBrand>Nha Vy VO DOAN</NavbarBrand>
+          <NavbarBrand color="black">Nha Vy VO DOAN</NavbarBrand>
           <NavbarToggler
-            color="white"
+            color="black"
             onClick={() => setOpenNavbar(!openNavbar)}
-            ripple="light"
+            ripple=""
           />
         </NavbarWrapper>
 
         <NavbarCollapse open={openNavbar}>
           <Nav leftSide>
-            <NavLink href="/portfolio" ripple="light">
+            <NavLink href="/portfolio" ripple="">
               <DescriptionIcon />
               Portfolio
             </NavLink>
-            <NavLink href="/" ripple="light">
-              <Icon name="account_circle" size="xl" />
+            <NavLink href="/" ripple="">
+              <Icon name="account_circle" size="xl" color='black'/>
               Presentation
             </NavLink>
           </Nav>
