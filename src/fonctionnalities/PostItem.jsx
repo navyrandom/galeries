@@ -11,9 +11,7 @@ function PostItem({ title, description, key, src }) {
     setLiked(!liked);
   };
 
-  // const handleDelete = () => {
-  //   console.log('rien')
-  // };
+ 
   return (
     <div className="card" key={key}>
       <div className="imgillustr">
