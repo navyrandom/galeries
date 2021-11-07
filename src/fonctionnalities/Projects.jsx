@@ -7,7 +7,7 @@ export default function Projects(props) {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://localhost:3031/api`)
+      .get(`http://localhost:5000/api`)
       .then((response) => response.data)
       .then((data) => setProjects(data));
   }, []);

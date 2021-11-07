@@ -34,7 +34,7 @@ export default function NewProject() {
   };
   const handleClickAdd = async () => {
     await axios
-      .post("http://localhost:3031/api", portfolio)
+      .post("http://localhost:5000/api", portfolio)
       .then((response) => {
         setPortfolio(response.data);
         setShowModal(false);
