@@ -10,13 +10,9 @@ import Input from "@material-tailwind/react/Input";
 import { useState } from "react";
 import axios from "axios";
 
-
 const useStyle = makeStyles({
   input: {
     width: "200px",
-  },
-  button: {
-    backgroundColor: '#496480',
   }
 });
 
@@ -48,49 +44,46 @@ export default function NewProject() {
 
   return (
     <>
-      <Button
-        className={classes.button}
-        type="button"
-        onClick={(e) => setShowModal(true)}
-        ripple="light"
-        size="lg"
-      >
-        + New project
-      </Button>
+      <div onClick={(e) => setShowModal(true)}> Add New project</div>
 
       <Modal size="lg" active={showModal} toggler={() => setShowModal(false)}>
         <ModalHeader toggler={() => setShowModal(false)}>
           Add new project <br />
         </ModalHeader>
         <ModalBody>
-          Title
+         <h2 style={{color:"black"}}> Title </h2>
           <Input
+       
             type="text"
-            color="lightBlue"
+            color="black"
             size="lg"
             outline={false}
             name="title"
             value={portfolio.title}
             onChange={handleChange}
-            style={{width: '1000px'}}
+            style={{ width: "1000px" }}
           />
-          Description
-          <Textarea color="lightBlue" size="regular" outline={false}
-          name="description"
-          value={portfolio.description}
-          onChange={handleChange}
+           <h2 style={{color:"black"}}> Description </h2> 
+          <Textarea
+            color="black"
+            size="regular"
+           
+            name="description"
+            value={portfolio.description}
+            onChange={handleChange}
           />
-          Image(s)'s link
-            <Input
+          <h2 style={{color:"black"}}> Link to the image </h2> 
+         
+          <Input
             type="text"
-            color="lightBlue"
+            color="black"
             size="lg"
             outline={false}
             name="image"
             value={portfolio.image}
             onChange={handleChange}
           />
-            </ModalBody>
+        </ModalBody>
         <ModalFooter>
           <Button
             color="red"

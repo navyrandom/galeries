@@ -7,38 +7,43 @@ import NavbarToggler from "@material-tailwind/react/NavbarToggler";
 import NavbarCollapse from "@material-tailwind/react/NavbarCollapse";
 import Nav from "@material-tailwind/react/Nav";
 import NavLink from "@material-tailwind/react/NavLink";
-import Icon from "@material-tailwind/react/Icon";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import DescriptionIcon from "@material-ui/icons/Description";
 import NewProject from "../fonctionnalities/NewProject";
 
 export default function BarNav({ onSubmit }) {
-  const [openNavbar, setOpenNavbar] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <Navbar color='yellow' navbar>
+    <Navbar color="lightBlue">
       <NavbarContainer>
         <NavbarWrapper>
-          <NavbarBrand color="black">Nha Vy VO DOAN</NavbarBrand>
+          <NavbarBrand>MÂY Studio</NavbarBrand>
           <NavbarToggler
-            color="black"
-            onClick={() => setOpenNavbar(!openNavbar)}
-            ripple=""
+            color="white"
+            onClick={() => setOpenMenu(!openMenu)}
+            ripple="light"
           />
         </NavbarWrapper>
 
-        <NavbarCollapse open={openNavbar}>
-          <Nav leftSide>
-            <NavLink href="/portfolio" ripple="">
-              <DescriptionIcon />
-              Portfolio
-            </NavLink>
-            <NavLink href="/" ripple="">
-              <Icon name="account_circle" size="xl" color='black'/>
+        <NavbarCollapse open={openMenu}>
+          <Nav>
+            <NavLink href="/">
+              <AccountCircle />
               Presentation
             </NavLink>
-          </Nav>
 
-          <NewProject />
+            <NavLink href="/portfolio">
+              <DescriptionIcon />
+              Galerie
+            </NavLink>
+
+            <NavLink>
+              <AddCircleOutlineIcon />
+              <NewProject />
+            </NavLink>
+          </Nav>
         </NavbarCollapse>
       </NavbarContainer>
     </Navbar>

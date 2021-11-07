@@ -19,8 +19,8 @@ export default function Projects(props) {
           return (
             <PostItem
               key={project.id}
-              // title={<h1>{project.title}</h1>}
-              // description={project.description}
+              title={<h1>{project.title}</h1>}
+              description={project.description}
               src={project.image}
             />
           );
