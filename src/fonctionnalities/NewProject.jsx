@@ -5,19 +5,13 @@ import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalFooter from "@material-tailwind/react/ModalFooter";
 import Button from "@material-tailwind/react/Button";
 import Textarea from "@material-tailwind/react/Textarea";
-import { makeStyles } from "@material-ui/core";
 import Input from "@material-tailwind/react/Input";
 import { useState } from "react";
 import axios from "axios";
 
-const useStyle = makeStyles({
-  input: {
-    width: "200px",
-  }
-});
 
 export default function NewProject() {
-  const classes = useStyle();
+
   const [showModal, setShowModal] = React.useState(false);
   const [portfolio, setPortfolio] = useState({
     title: "",
